@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #efe3d0;
+  color: #3b2a1f;
+}
+
+/* 상단 타이틀바 */
+.title-bar {
+  height: 90px;
+  background-color: #4b2f22;
+  color: #fff8ed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+.title-bar h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* 전체 레이아웃 */
+.layout {
+  display: flex;
+  min-height: calc(100vh - 90px);
+}
+
+/* 왼쪽 메뉴바 */
+.sidebar {
+  width: 190px;
+  background-color: #6b4226;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  color: #fff8ed;
+  text-decoration: none;
+  padding: 18px 24px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #3f2518;
+}
+
+/* 오른쪽 콘텐츠 영역 */
+.content {
+  flex: 1;
+  padding: 45px;
+}
+
+/* 홈 화면 */
+.home-box {
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(60, 35, 20, 0.35), rgba(60, 35, 20, 0.35)),
+                    url("../images/library-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+
+/* 장르 페이지 책장 */
+.genre-title {
+  font-size: 30px;
+  margin-bottom: 35px;
+}
+
+.shelf-area {
+  background-color: #d8b98c;
+  border-radius: 18px;
+  padding: 50px 40px 35px;
+  box-shadow: inset 0 -18px 0 #7b4f2f, 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-list {
+  display: flex;
+  gap: 35px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.book {
+  text-align: center;
+  text-decoration: none;
+  color: #3b2a1f;
+}
+
+.book img {
+  width: 130px;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s;
+}
+
+.book img:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+
+.book p {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* 책 상세 페이지 */
+.detail-box {
+  background-color: #fff8ed;
+  border-radius: 20px;
+  padding: 45px;
+  min-height: 520px;
+  display: flex;
+  gap: 45px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.detail-cover {
+  width: 190px;
+  height: 285px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.detail-info h2 {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.detail-info p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.arrows {
+  position: absolute;
+  right: 35px;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.arrows a {
+  text-decoration: none;
+  color: #4b2f22;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.arrows a:hover {
+  text-decoration: underline;
+}
